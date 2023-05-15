@@ -1,6 +1,6 @@
 # READ ME
 
-Talk *'About Digital Twins, agents, and multiagent systems: a cross-fertilisation journey'* given by [Stefano Mariani](https://smarianimore.github.io) at [EMAS 2022](https://emas.in.tu-clausthal.de/2022/)
+Talk *'Towards developing Digital Twin enabled Multi-Agent Systems'* to be given by [Stefano Mariani](https://smarianimore.github.io) at [EMAS 2023](https://emas.in.tu-clausthal.de/2023/)
 
 # Credits
 

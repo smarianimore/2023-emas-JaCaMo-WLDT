@@ -7,8 +7,8 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
 
-    <title>Adaptive Intersections @ WETICE 2021</title>
-    <meta content="Talk 'About Digital Twins, agents, and multiagent systems: a cross-fertilisation journey' given by Stefano Mariani at EMAS 2022" name="description">
+    <title>DT-enabled MAS @ EMAS 2023</title>
+    <meta content="Talk 'Towards developing Digital Twin enabled Multi-Agent Systems' given by Stefano Mariani at EMAS 2023" name="description">
     <meta content="Stefano Mariani" name="author">
 
     <meta content="yes" name="apple-mobile-web-app-capable">
@@ -39,34 +39,53 @@
     <div class="reveal">
       <div class="slides">
 
-        <section data-transition="convex" data-background-image="res/emas-landing-small.png" data-background-opacity=0.25 data-background-size="cover">
-          <p><small> EMAS @ AAMAS, 9-10/5/2022 </small></p>
+        <section data-transition="convex" data-background-image="res/emas-landing.png" data-background-opacity=0.25 data-background-size="cover">
+          <p><small> EMAS @ AAMAS, 29-30/5/2023 </small></p>
           <hr>
-          <h3> About Digital Twins, agents, and multiagent systems: a cross-fertilisation journey </h3>
+          <h3> Towards developing Digital Twin enabled Multi-Agent Systems </h3>
           <hr>
           <p> <a href="https://smarianimore.github.io">Stefano Mariani</a>*, Marco Picone*, Alessandro Ricci° </p>
           <hr>
           <p>
-            <small><em> *Università di Modena e Reggio Emilia </em></small>
+            <small><em> *University of Modena and Reggio Emilia, Reggio Emilia, Italy </em></small>
             </br>
-            <small><em> °Università di Bologna </em></small>
+            <small><em> °University of Bologna, Cesena campus, Italy </em></small>
           </p>
         </section>
 
-        <section data-transition="convex" data-background-image="res/dt-agent.jpg" data-background-opacity=0.15 data-background-size="cover">
-          <h3> Motivation & Goal </h3>
-          <hr>
-          <ul>
-            <li> Digital Twins (<strong>DT</strong>s) emerging as fundamental bricks of <em>Cyber-Physical Systems</em> (CPS) <strong>engineering</strong> </li>
-            <ul><small>
-              <li class="fragment"> but lacking general-purpose model and methodology </li>
-            </small></ul>
-            <li class="fragment"> Multi-Agent Systems (<strong>MAS</strong>) well-established engineering paradigm for <em>intelligent systems</em> </li>
-            <ul><small>
-              <li class="fragment"> but limited success in deployment within CPS </li>
-            </small></ul>
-          </ul>
-          <p class="fragment"> <span class="fragment highlight-green">Goal</span>: shed light on <em>responsibilities</em> and <em>opportunities</em> for <strong>synergistic</strong> exploitation! </p>
+        <section data-transition="convex">
+          <section data-transition="slide">
+            <h3> Motivations </h3>
+            <hr>
+            <ul>
+              <li> MAS lack principled approach to engineer the <strong>digital <-> physical frontier</strong> </li>
+              <ul><small>
+                <li class="fragment"> there are model and methods for environment modeling </li>
+                <li class="fragment"> but the focus is mostly on <em>interface exposed to agents</em> </li>
+                <li class="fragment"> and the "nuts and bolts" of digital <-> physical connection <span class="fragment highlight-red">lack structure</span> </li>
+              </small></ul>
+              <li class="fragment"> DTs may fill in the gap! </li>
+              <ul><small>
+                <li class="fragment"> <span class="fragment highlight-blue">uniform and interoperable</span> access to resources </li>
+                <li class="fragment"> digital <-> physical synchronisation </li>
+              </small></ul>
+            </ul>
+          </section>
+
+          <section data-transition="slide">
+            <h3> Goals </h3>
+            <hr>
+            <p> Better MAS environment engineering! </p>
+            <ul>
+              <li class="fragment"> <strong>separation of concerns</strong> MAS <-> CPS </li>
+              <li class="fragment"> <strong>independent evolution</strong> MAS <-> CPS </li>
+            </ul>
+            <p class="fragment"> How? </p>
+            <ul>
+              <li class="fragment"> put DTs between MAS and CPS </li>
+              <li class="fragment"> let DTs handle interface towards CPS </li>
+            </ul>
+          </section>
         </section>
 
         <section data-transition="convex">
@@ -74,37 +93,15 @@
             <h3> Digital Twins </h3>
             <hr>
             <ul>
-              <li> <em>virtualisation</em> of real world entities (<strong>p</strong>hysical <strong>a</strong>ssets) </li>
-              <li class="fragment"> <em>faithful</em> digital replicas </li>
-              <li class="fragment"> deeply <em>intertwined</em> with their physical twin </li>
+              <li> <em>Virtualisation</em> of real world entities (<strong>p</strong>hysical <strong>a</strong>ssets) </li>
+              <li class="fragment"> <em>Faithful</em> digital replicas </li>
+              <li class="fragment"> Deeply <em>intertwined</em> with their physical twin </li>
+              <li class="fragment"> Connected in a <em>web</em> of semantic overlays </li>
             </ul>
             <hr>
-            <p style="color:grey"><small><em> Saracco, R.: Digital twins: Bridging physical space and cyberspace. Computer 52(12), 58–64 (2019) </em></small></p>
+            <p style="color:grey"><small><em> Ricci, A. et al.: Web of digital twins. Transactions on Internet Technology, ACM. 2021.</em></small></p>
           </section>
-          <section data-transition="slide" data-background-image="res/dt-agent-contexts.png" data-background-opacity=0.10 data-background-size="cover">
-            <h3> Dual perspective </h3>
-            <hr>
-            <ul>
-              <li> DTs as virtual <strong>environment</strong> for MAS </li>
-              <ul>
-                <li> abstraction </li>
-                <li> decoupling </li>
-                <li> encapsulation of heterogeneity (data, behaviour, protocols, ...) </li>
-              </ul>
-              <div class="fragment">
-                <li> MAS as <strong>augmentation</strong> for DTs </li>
-                <ul>
-                  <li> reasoning </li>
-                  <li> decision making </li>
-                  <li> autonomy </li>
-                </ul>
-              </div>
-            </ul>
 
-            <aside class="notes">
-              It is this dual perspective that allows to think about cross-fertilisation, that is, taking ideas and mechanisms from DT to agents and viceversa!
-            </aside>
-          </section>
           <section data-transition="slide" data-background-image="res/dt-agent-contexts.png" data-background-opacity=0.10 data-background-size="cover">
             <h3> Separation of concerns </h3>
             <hr>
@@ -126,11 +123,10 @@
                 </ul></small>
               </div>
             </ul>
-
-            <aside class="notes">
-              This distinction is key to guide system design by the engineer!
-            </aside>
+            <hr>
+            <p style="color:grey"><small><em> Mariani, S. et al.: Agents and Digital Twins for the engineering of cyber-physical systems: opportunities, and challenges.<br>Annals of Mathematics and Artificial Intelligence, Springer. To appear. </em></small></p>
           </section>
+
           <section data-transition="slide">
             <img width="200%" height="200%" data-src="res/dt-agent-contexts.png">
             <p> This separation allows for assigning clear responsibilities during system design! </p>
@@ -138,184 +134,139 @@
         </section>
 
         <section data-transition="convex">
-          <section data-transition="slide" data-background-image="res/dt2mas-generic.png" data-background-opacity=0.10 data-background-size="cover">
-            <h3> DTs for agents and MAS </h3>
+          <section data-transition="slide">
+            <h3> Conceptual architecture I </h3>
+            <hr>
+            <img width="200%" height="200%" data-src="res/arch-conceptual.png">
+          </section>
+
+          <section data-transition="slide" data-background-image="res/arch-conceptual.png" data-background-opacity=0.1 data-background-size="cover">
+            <h3> Artefacts in A&A </h3>
             <hr>
             <ul>
-              <li> DTs are akin to <strong>artefacts</strong> of the <em>A&A metamodel</em>... </li>
-              <ul><small>
-                <li> used by agents </li>
-                <li> structuring the environment </li>
-                <li> mediating interaction </li>
-              </small></ul>
-              <div class="fragment">
-                <li> ...but also fundamentally different </li>
-                <ul><small>
-                  <li> bi-directional <strong>synchronisation</strong> with PAs </li>
-                  <li> <strong>faithful</strong> representation of the (physical) dynamics of the PA </li>
-                </small></ul>
-              </div>
+              <li> Bring level of <em>abstraction</em> closer to AOP </li>
+              <li class="fragment"> by <em>encapsulating</em> env. resources as agents' tools </li>
+              <li class="fragment"> thus <em>mapping</em> MAS env. resources to available perceptions and admissible actions </li>
             </ul>
             <hr>
             <p style="color:grey"><small><em> Omicini, A., Ricci, A., Viroli, M.: Artifacts in the A&A meta-model for multi-agent systems. Autonomous Agents and Multi-Agent Systems 17(3), 432–456 (2008) </em></small></p>
           </section>
-          <section data-transition="slide" id="dt2mas-individual">
-            <h3> Individual perspective </h3>
-            <hr>
-            <style>
-              .container{
-                display: flex;
-              }
-              .col{
-                flex: 1;
-              }
-            </style>
-            <div class="container">
-              <div class="col">
-                <img data-src="res/dt2mas-generic.png">
-              </div>
-              <div class="col">
-                </br>
-                </br>
-                <img data-src="res/dt2mas-synergy.png">
-              </div>
-            </div>
-            <p> Agents <em>delegate</em> to DTs tasks requiring knowledge of the <em>local PA context</em> </p>
-            <p><small><a href="#/mas2dt-individual">$$\rightarrow$$</a></small></p>
 
-            <aside class="notes">
-              Applications are engineered around agents, that exploit DTs services.
-
-              The guiding principle based on local/global context is crucial to guide the designer in separating concerns and synergistic exploitation.
-            </aside>
-          </section>
-          <section data-transition="slide" data-background-image="res/dt2mas-generic.png" data-background-opacity=0.10 data-background-size="cover">
-            <h3> System perspective </h3>
+          <section data-transition="slide" data-background-image="res/arch-conceptual.png" data-background-opacity=0.1 data-background-size="cover">
+            <h3> Conceptual architecture II </h3>
             <hr>
             <ul>
-              <li> The literature is abundant on what to expect from an <strong>individual</strong> DT </li>
-              <li class="fragment"> Not much is said about <span class="fragment highlight-red">networks of DTs</span> </li>
-              <ul>
-                <li class="fragment"> can DTs be linked together to structure the virtual environment? </li>
-                <li class="fragment"> should such structure be hierarchical? </li>
-                <li class="fragment"> can it be changed dynamically? </li>
-                <li class="fragment"> if so, by the application (agents) or by DTs themselves? </li>
-              </ul>
+              <li> DTs promote development paradigm closer to devices </li>
+              <li class="fragment"> Artefacts promote development paradigm closer to agents </li>
             </ul>
-          </section>
-          <section data-transition="slide">
-            <ul>
-              <p><small> <strong>Web of Digital Twins</strong>: application-dependent <em>knowledge graphs</em>, dynamically established amongst DTs depending on CPS dynamics and application goals </small></p>
-              <img width="75%" height="75%" data-src="res/dt2mas-wodt.png">
-              <p style="color:grey"><small><em> Ricci, A., Croatti, A., Mariani, S., Montagna, S., Picone, M.: Web of digital twins.</br>ACM Trans. Internet Technol. (dec 2021). https://doi.org/10.1145/3507909</em></small></p>
-            </ul>
-
-            <aside class="notes">
-              Example of WoDT of a smart city and dynamic linking used for traffic control.
-
-              This is only the most natural engineering paradigm from MAS perspective, we don't argue it is the only one!
-            </aside>
+            <p class="fragment"> <span class="fragment highlight-blue">Integrating the two enables our goals!</span> </p>
+            <p class="fragment"> <span class="fragment highlight-red">But <strong>how</strong>, <em>in practice</em>?</span> </p>
           </section>
         </section>
 
         <section data-transition="convex">
-          <section data-transition="slide" data-background-image="res/mas2dt-individual.png" data-background-opacity=0.10 data-background-size="cover">
-            <h3> Agents and MAS for DTs </h3>
-            <hr>
-            <ul>
-              <li> Agents as enablers of <strong>intelligent</strong> behaviours </li>
-              <ul><small>
-                <li> domain-independent models available (e.g. BDI) </li>
-                <li> encapsulation of (reusable) decision making </li>
-                <li> "as-a-service" perspective orthogonal to applications </li>
-              </small></ul>
-              <div class="fragment">
-                <li> Agents as <strong>orchestrators</strong> and <strong>mediators</strong> </li>
-                <ul><small>
-                  <li> handling DTs lifecyle </li>
-                  <li> monitoring and controlling execution </li>
-                  <li> enacting coordination mechanisms and protocols </li>
-                </small></ul>
-              </div>
-            </ul>
-
-            <aside class="notes">
-              Again, this is only the most natural paradigm for us, as MAS engineers, but there could be more!
-            </aside>
-          </section>
-          <section data-transition="slide" id="mas2dt-individual">
-            <h3> Individual perspective </h3>
-            <hr>
-            <img width="65%" height="65%" data-src="res/mas2dt-individual.png">
-            <p><small> DTs <em>delegate</em> to agents "intelligent" tasks (reasoning, prediction, ...) that require</br><em>broader context</em> w.r.t. the local one accessible to DTs </small></p>
-            <p><small><a href="#/dt2mas-individual">$$\leftarrow$$</a></small></p>
-
-            <aside class="notes">
-              W.r.t. to figure dt2mas-individual, here applications revolve around DTs
-            </aside>
-          </section>
-          <section data-transition="slide" data-background-image="res/mas2dt-individual.png" data-background-opacity=0.10 data-background-size="cover">
-            <h3> System perspective </h3>
-            <hr>
-            <ul>
-              <li> Again, the literature is lacking about an <span class="fragment highlight-red">open systems</span> perspective: </li>
-              <ul>
-                <li class="fragment"> who is responsible for DTs lifecycle (e.g. binding to PAs, synching, etc.)? </li>
-                <li class="fragment"> is there a "God-like" <em>orchestrator</em>? </li>
-                <li class="fragment"> how can DTs <em>interact</em> in meaningful ways towards application goals? </li>
-                <li class="fragment"> is DTs aggregation akin to service composition enough? </li>
-              </ul>
-            </ul>
-          </section>
           <section data-transition="slide">
-            <p><small> Agents as <strong>mediators</strong> (left): DTs express the intended interaction semantics (e.g. CFP), delegating to agents the figuring out of <em>interaction sequences</em> </small></p>
-            <style>
-              .container{
-                display: flex;
-              }
-              .col{
-                flex: 1;
-              }
-            </style>
-            <div class="container">
-              <div class="col">
-                <img width="100%" height="100%" data-src="res/mas2dt-system-interaction.png">
-              </div>
-              <div class="col">
-                <img width="100%" height="100%" data-src="res/mas2dt-system-orchestration.png">
-              </div>
-            </div>
-            <p><small> Agents as <strong>orchestrators</strong> (right): DTs seamlessly execute while agents take care of</br><em>"DevOps"</em> (e.g. creation, linking, migration, scaling, disposal, ...) </small></p>
+            <h3> Technical architecture </h3>
+            <hr>
+            <img width="200%" height="200%" data-src="res/arch-technical.png">
+          </section>
+
+          <section data-transition="slide" data-background-image="res/arch-technical.png" data-background-opacity=0.1 data-background-size="cover">
+            <h3>Enabler technologies </h3>
+            <hr>
+            <ul>
+              <li> JaCaMo: <a href="https://jacamo.sourceforge.net/">jacamo.sourceforge.net</a> </li>
+              <small><ul>
+                <li class="fragment"> MAS development and execution platform </li>
+                <li class="fragment"> embraces the A&A meta-model via CArtAgO </li>
+                <li class="fragment"> <strong>programmatic</strong> management of artefacts </li>
+              </ul></small>
+              <li class="fragment"> WLDT: <a href="https://github.com/wldt">github.com/wldt</a> </li>
+              <small><ul>
+                <li class="fragment"> DTs development and execution platform </li>
+                <li class="fragment"> <strong>discovery service</strong> </li>
+                <li class="fragment"> web-ready DT descriptor </li>
+              </ul></small>
+            </ul>
+          </section>
+
+          <section data-transition="slide" data-background-image="res/arch-technical.png" data-background-opacity=0.1 data-background-size="cover">
+            <h3> DTs layer </h3>
+            <hr>
+            <ul>
+              <li> <strong>DTDescriptor</strong>: JSON/XML representation of the DT </li>
+              <small><ul>
+                <li class="fragment"> properties (e.g. temperature, location, local time) </li>
+                <li class="fragment"> actions (e.g. turn on, turn off, set temperature) </li>
+                <li class="fragment"> behaviours (e.g. turn on until temp > 18) </li>
+                <li class="fragment"> relations to other DTs (e.g. thermostat linked to A/C system) </li>
+                <li class="fragment"> metadata (e.g. connection protocol, URL) </li>
+              </ul></small>
+              <li class="fragment"> <strong>WLDTDiscoveryService</strong>: advertise & discover DTs </li>
+              <small><ul>
+                <li class="fragment"> exposes DTDescriptor to known address </li>
+              </ul></small>
+            </ul>
+          </section>
+
+          <section data-transition="slide" data-background-image="res/arch-technical.png" data-background-opacity=0.1 data-background-size="cover">
+            <h3> Integration layer I </h3>
+            <hr>
+            <ul>
+              <li> <strong>DTDiscoveryArtefact</strong>: automatically creates artefacts connected to DTs </li>
+              <small><ul>
+                <li class="fragment"> DT property <-> artefact observable prop. </li>
+                <li class="fragment"> DT action <-> artefact operation </li>
+                <li class="fragment"> DT behaviour <-> observable prop. + operation </li>
+                <li class="fragment"> DT relation <-> artefact link </li>
+              </ul></small>
+              <li class="fragment"> exploits JaCaMo and WLDT services to </li>
+              <small><ul>
+                <li class="fragment"> <em>programmatically</em> create artefacts in workspace </li>
+                <li class="fragment"> do the mapping above </li>
+                <li class="fragment"> set-up bi-directional comm. link artefact <-> DT </li>
+              </ul></small>
+            </ul>
+          </section>
+
+          <section data-transition="slide" data-background-image="res/arch-technical.png" data-background-opacity=0.1 data-background-size="cover">
+            <h3> Developers' point of view </h3>
+            <hr>
+            <ul>
+              <li> MAS side </li>
+              <small><ul>
+                <li class="fragment"> develop their agents </li>
+                <li class="fragment"> configure DTDiscoveryArtefact with well-known URL of WLDTDiscoveryService </li>
+                <li class="fragment"> start the automatic "creation & mapping" process (ad-hoc operation) </li>
+              </ul></small>
+              <li class="fragment"> CPS side </li>
+              <small><ul>
+                <li class="fragment"> develop their DTs </li>
+                <li class="fragment"> publish them to the WLDTDiscoveryService </li>
+              </ul></small>
+            </ul>
+            <p class="fragment"> Little agreement is required -> loose coupling <br> (both at design and run time) </p>
+            <!--<p class="fragment"> <span class="fragment highlight-red">Agreement is required at the interface <br> DTs layer <-> MAS env. layer!</span> </p>-->
           </section>
         </section>
 
         <section data-transition="convex" data-background-image="res/crossroad.jpg" data-background-opacity=0.15 data-background-size="cover">
           <section data-transition="slide">
-            <h3> Research Directions 1/2 </h3>
+            <h3> Conclusion & outlook </h3>
             <hr>
             <ul>
-              <li> <strong>Cross-fertilisation</strong> opportunities revolve around two core ideas: </li>
-              <ul><small>
-                <li class="fragment"> adopt <strong>DTs</strong> as the engineering abstraction to structure and encapsulate CPS resources and dynamics </li>
-                <li class="fragment"> adopt <strong>agents</strong> as the engineering abstraction to encapsulate goal-oriented decision-making </li>
-              </small></ul>
-            </ul>
-            <p class="fragment"> As decision making <em>depends</em> on the CPS state (and viceversa), synergistic exploitation of agents and DTs is more of a <em>requirement</em> than a nice to have! </p>
-          </section>
-          <section data-transition="slide">
-            <h3> Research Directions 2/2 </h3>
-            <hr>
-            <ul>
-              <li> Cognitive DTs: <small><em>what if the DT can autonomously evolve through simulation and AI-enabled techniques?</em></small> </li>
-              <li class="fragment"> Anticipatory planning: <small><em>how can DTs and agent cooperate to plan ahead through prediction and what-if analysis?</em></small> </li>
-              <li class="fragment"> Socio-technical systems: <small><em>how about DTs virtualising people and organisation besides PAs?</em></small> </li>
-              <li class="fragment"> Mirror worlds: <small><em>how about digital artefacts reified in our physical world (e.g. holograms)?</em></small> </li>
-              <li class="fragment"> Standardisation & interoperability: <small><em>can DTs standardise agents means of interactions with environments?</em></small> </li>
+              <li> The proposed integration promotes separation of concerns and independent evolution </li>
+              <li class="fragment"> We expect to open source the integration during summer 😊 </li>
+              <small><ul>
+                <li class="fragment"> JaCaMo components are already available (workspaces, artefacts, links, programmatic API) </li>
+                <li class="fragment"> Some WLDT components are now underway (discovery service) </li>
+              </ul></small>
+              <li class="fragment"> Enabling experimentation of the synergies between agents and DTs! </li>
             </ul>
           </section>
         </section>
 
-        <section data-transition="convex" data-background-image="confused-meme.png" data-background-opacity=0.25 data-background-size="cover">
+        <section data-transition="convex" data-background-image="res/confused-meme.png" data-background-opacity=0.25 data-background-size="cover">
           <h3> Thanks </h3>
           <h3> for your attention </h3>
           <hr>
